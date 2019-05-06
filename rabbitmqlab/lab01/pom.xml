@@ -8,12 +8,37 @@
     <artifactId>lab01</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <!--RabbitMQ Java client，the library allows Java code to interface with RabbitMQ-->
         <dependency>
             <groupId>com.rabbitmq</groupId>
             <artifactId>amqp-client</artifactId>
             <version>5.7.0</version>
+        </dependency>
+        <!--选择其中一种依赖api实现slf4j-log4j12 | slf4j-nop | slf4j-simple，
+        可以去除掉控制台打印的警告：-->
+        <!--SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".-->
+        <!--SLF4J: Defaulting to no-operation (NOP) logger implementation-->
+        <!--SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.-->
+        <!--<dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.26</version>
+        </dependency>-->
+        <!--<dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>1.7.26</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.26</version>
         </dependency>
     </dependencies>
 

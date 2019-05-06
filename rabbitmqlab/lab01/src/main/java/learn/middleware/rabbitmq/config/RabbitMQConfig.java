@@ -15,11 +15,11 @@ public class RabbitMQConfig {
     public static void connect() {
         ConnectionFactory factory = new ConnectionFactory();
         //“guest” /“guest”默认情况下，仅限于本地主机连接
-        factory.setUsername("guest");
-        factory.setPassword("guest");
-        factory.setVirtualHost("/");
+//        factory.setUsername("guest");
+//        factory.setPassword("guest");
+//        factory.setVirtualHost("/");
         factory.setHost("localhost");
-        factory.setPort(5672);
+//        factory.setPort(5672);
 
         try {
             Connection conn = factory.newConnection();
